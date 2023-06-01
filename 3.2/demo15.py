@@ -19,21 +19,27 @@ html='''
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'lxml')
 print(soup.select('.panel .panel-heading'))
-print(soup.select('ul li'))
+print(soup.select('ul li')/)
 print(soup.select('#list-2 .element'))
 print(type(soup.select('ul')[0]))
+
+print("----------------------------------------------")
 
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'lxml')
 for ul in soup.select('ul'):
     print(ul.select('li'))
-    
+
+print("----------------------------------------------")
+
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'lxml')
 for ul in soup.select('ul'):
     print(ul['id'])
     print(ul.attrs['id'])
-    
+
+print("----------------------------------------------")
+
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'lxml')
 for li in soup.select('li'):

@@ -16,6 +16,10 @@ html = """
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'lxml')
 print('Next Sibling', soup.a.next_sibling)
+print(type(soup.a.next_sibling))
 print('Prev Sibling', soup.a.previous_sibling)
+print(type(soup.a.previous_sibling))
 print('Next Siblings', list(enumerate(soup.a.next_siblings)))
+print(type(soup.a.next_siblings))
 print('Prev Siblings', list(enumerate(soup.a.previous_siblings)))
+print(type(soup.a.previous_siblings))

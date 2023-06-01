@@ -21,6 +21,8 @@ soup = BeautifulSoup(html, 'lxml')
 print(soup.find_all(attrs={'id': 'list-1'}))
 print(soup.find_all(attrs={'name': 'elements'}))
 
+print("----------------------------------------------")
+
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'lxml')
 print(soup.find_all(id='list-1'))

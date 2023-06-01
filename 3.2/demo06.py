@@ -19,14 +19,20 @@ html = """
 
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'lxml')
-print(soup.p.contents)
+print(type(soup.p.contents))
+for i, child in enumerate(soup.p.contents):
+    print(i, child)
+
+print("---------------------------------------")
 
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'lxml')
 print(soup.p.children)
 for i, child in enumerate(soup.p.children):
     print(i, child)
-    
+
+print("---------------------------------------")
+
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'lxml')
 print(soup.p.descendants)

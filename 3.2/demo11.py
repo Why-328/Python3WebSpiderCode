@@ -21,9 +21,13 @@ soup = BeautifulSoup(html, 'lxml')
 print(soup.find_all(name='ul'))
 print(type(soup.find_all(name='ul')[0]))
 
+print("----------------------------------------------")
+
 for ul in soup.find_all(name='ul'):
     print(ul.find_all(name='li'))
-    
+
+print("----------------------------------------------")
+
 for ul in soup.find_all(name='ul'):
     print(ul.find_all(name='li'))
     for li in ul.find_all(name='li'):
